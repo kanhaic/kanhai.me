@@ -1,0 +1,90 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  {% block profile %}
+    <section class="cover unpad switchable switchable--switch text-center-xs">
+      <div class="container">
+        <div class="row align-items-center justify-content-around">
+          <div class="col-md-6">
+            <img alt="Image" src="{{settings.picture}}"/>
+          </div>
+          <div class="col-md-6 col-lg-5 mt-0">
+            <h1 class="color--primary">
+                                Hi, I'm <br class="hidden-xs hidden-sm"/>
+              {{settings.firstName}}
+              {{settings.lastName}}
+            </h1>
+            <p class="lead">
+              {{settings.profileText}}
+            </p>
+            <a class="btn btn--primary type--uppercase" href="/resume">
+              <span class="btn__text">
+                                    Resume
+                                </span>
+            </a>
+          </div>
+
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </section>
+  {% endblock %}
+{{content | safe}}
+  {% block recentblogs %}
+    <section class="space--xs">
+      <div class="container">
+        <div class="row text-block">
+          <div class="col-md-12">
+            <h3>More recent stories</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <article class="feature feature-1">
+              <a href="#" class="block">
+                <img alt="Image" src="/assets/img/blog-2.jpg">
+              </a>
+              <div class="feature__body boxed boxed--border">
+                <span>May 25th 2016</span>
+                <h5>A day in the life of a professional fitness blogger</h5>
+                <a href="#">
+							Read More
+						</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="feature feature-1">
+              <a href="#" class="block">
+                <img alt="Image" src="/assets/img/blog-3.jpg">
+              </a>
+              <div class="feature__body boxed boxed--border">
+                <span>May 25th 2016</span>
+                <h5>Small businesses that expertly leverage their online followings</h5>
+                <a href="#">
+							Read More
+						</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="feature feature-1">
+              <a href="#" class="block">
+                <img alt="Image" src="/assets/img/blog-4.jpg">
+              </a>
+              <div class="feature__body boxed boxed--border">
+                <span>May 25th 2016</span>
+                <h5>Designing efficiently in the age of distraction</h5>
+                <a href="#">
+							Read More
+						</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+
+{% endblock %}

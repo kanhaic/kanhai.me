@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{ title }} | Kanhai Chhugani</title>
+        <title>{{ title }} | {{settings.firstName}} {{settings.lastName}}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/assets/css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
-        <link href="/assets/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="/assets/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="/assets/css/theme.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/assets/css/flickity.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/assets/css/socicon.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="/assets/css/stack-interface.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="/assets/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet" type="text/css">
         <link href="/assets/css/font-raleway.css" rel="stylesheet" type="text/css">
@@ -22,10 +22,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-3 col-md-2">
-                                <a href="/" style="text-decoration : none"> <h2>Kanhai</h2> </a>
+                                <a href="/" style="text-decoration : none">
+                                    <h2>Kanhai</h2>
+                                </a>
                             </div>
                             <div class="col-9 col-md-10 text-right">
-                                <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
+                                <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm">
+                                    <i class="icon icon--sm stack-interface stack-menu"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -35,21 +39,29 @@
                         <div class="row">
                             <div class="col-lg-1 col-md-2 hidden-xs">
                                 <div class="bar__module">
-                                <a href="/" style="text-decoration : none"> <h2>Kanhai</h2> </a>
+                                    <a href="/" style="text-decoration : none">
+                                        <h2>{{settings.firstName}}</h2>
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
                                 <div class="bar__module">
                                     <ul class="menu-horizontal text-left">
-                                        <li> <a href="/blogs/">
+                                        <li>
+                                            <a href="/blogs">
                                         Blogs
-                                    </a> </li>
-                                        <li> <a href="/resume">
+                                    </a>
+                                        </li>
+                                        <li>
+                                            <a href="/resume">
                                         Resume
-                                    </a> </li>
-                                        <li> <a href="/contact">
+                                    </a>
+                                        </li>
+                                        <li>
+                                            <a href="/contact">
                                         Contact
-                                    </a> </li>
+                                    </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -60,27 +72,45 @@
         </div>
         <div class="main-container">
 
-        {{ content | safe }}
+            {% block content %}
+                {{ content | safe }}
+            {% endblock %}
 
-        <footer class="space--sm footer-2">
+            <footer class="space--sm footer-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 col-md-3 col-xs-6">
-                            <h6 class="type--uppercase">Kanhai Chhugani</h6>
+                            <h6 class="type--uppercase">{{settings.firstName}} {{settings.lastName}}</h6>
                             <ul class="list--hover">
-                                <li><a href="#">About Kanhai</a></li>
-                                <li><a href="#">History</a></li>
+                                <li>
+                                    <a href="#">About {{settings.firstName}}</a>
+                                </li>
+                                <li>
+                                    <a href="#">History</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-sm-6 col-md-3 col-xs-6">
                             <h6 class="type--uppercase">Developers</h6>
                             <ul class="list--hover">
-                                <li><a href="#">Developer Center</a></li>
-                                <li><a href="#">API Reference</a></li>
-                                <li><a href="#">Downloads</a></li>
-                                <li><a href="#">Tools</a></li>
-                                <li><a href="#">Developer Blog</a></li>
-                                <li><a href="#">Developer Forums</a></li>
+                                <li>
+                                    <a href="#">Developer Center</a>
+                                </li>
+                                <li>
+                                    <a href="#">API Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#">Downloads</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">Developer Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Developer Forums</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-sm-6 col-md-3 col-xs-6">
@@ -92,19 +122,33 @@
                         <div class="col-sm-6 col-md-3 col-xs-6">
                             <h6 class="type--uppercase">Locations</h6>
                             <ul class="list--hover">
-                                <li><a href="#">Melbourne</a></li>
-                                <li><a href="#">London</a></li>
-                                <li><a href="#">New York</a></li>
-                                <li><a href="#">San Francisco</a></li>
+                                <li>
+                                    <a href="#">Melbourne</a>
+                                </li>
+                                <li>
+                                    <a href="#">London</a>
+                                </li>
+                                <li>
+                                    <a href="#">New York</a>
+                                </li>
+                                <li>
+                                    <a href="#">San Francisco</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6"> <span class="type--fine-print">© <span class="update-year"></span> Kanhai Chhugani</span> </div>
+                        <div class="col-sm-6">
+                            <span class="type--fine-print">© <span class="update-year"></span> {{settings.firstName}} {{settings.lastName}} </span>
+                        </div>
                         <div class="col-sm-6 text-right text-left-xs">
                             <ul class="social-list list-inline list--hover">
                                 {% for social in settings.socials %}
-                                    <li><a href="{{social.url}}" target="_blank"><i class="socicon socicon-{{social.name}} icon icon--xs"></i></a></li>    
+                                    <li>
+                                        <a href="{{social.url}}" target="_blank">
+                                            <i class="socicon socicon-{{social.name}} icon icon--xs"></i>
+                                        </a>
+                                    </li>
                                 {% endfor %}
                             </ul>
                         </div>
@@ -113,11 +157,20 @@
             </footer>
         </div>
         <script src="/assets/js/jquery-3.1.1.min.js"></script>
-        <script src="/assets/js/parallax.js"></script>
-        <script src="/assets/js/smooth-scroll.min.js"></script>
+        <script src="/assets/js/easypiechart.min.js"></script>
         <script src="/assets/js/flickity.min.js"></script>
+        <script src="/assets/js/parallax.js"></script>
+        <script src="/assets/js/typed.min.js"></script>
+        <script src="/assets/js/datepicker.js"></script>
+        <script src="/assets/js/isotope.min.js"></script>
+        <script src="/assets/js/ytplayer.min.js"></script>
+        <script src="/assets/js/lightbox.min.js"></script>
+        <script src="/assets/js/granim.min.js"></script>
+        <script src="/assets/js/jquery.steps.min.js"></script>
+        <script src="/assets/js/countdown.min.js"></script>
         <script src="/assets/js/twitterfetcher.min.js"></script>
-        <script src="/assets/js/options.js"></script>
+        <script src="/assets/js/spectragram.min.js"></script>
+        <script src="/assets/js/smooth-scroll.min.js"></script>
         <script src="/assets/js/scripts.js"></script>
 
     </body>

@@ -1,0 +1,186 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  {% block profile %}
+    <section class="unpad--top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-lg-4">
+            <img
+          class="img-thumbnail"
+          src="{{settings.thumbnail}}"
+          alt="{{settings.firstName}} {{settings.lastName}} "
+/>
+          </div>
+          <div class="col-md-10 col-lg-8">
+            <h1>{{settings.firstName}}
+              {{settings.lastName}}</h1>
+            <h2>Profile</h2>
+            <p class="lead">
+              {{settings.profileText}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+
+  {% block skills %}
+    <section class="unpad unmarg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="feature">
+              <h4>Education</h4>
+              <ul class="bullets">
+                {% for edu in settings.educations %}
+                  <li>{{edu}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="feature">
+              <h4>Technical Skill Sets</h4>
+              <ul class="bullets">
+                {% for dev in settings.devLanguages %}
+                  <li>{{dev}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="feature">
+              <h4>Databases</h4>
+              <ul class="bullets">
+                {% for db in settings.databases %}
+                  <li>{{db}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature">
+              <h4>Technology</h4>
+              <ul class="bullets">
+                {% for platform in settings.platforms %}
+                  <li>{{platform}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+
+  {% block experience %}
+    <section class="unpad">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-8 col-lg-7">
+            <h2>Experience</h2>
+            {%- for exp in collections.experiences | reverse -%}
+              <h3 class="unmarg">
+                {{exp.data.name}} -
+                <small>{{exp.data.location}}</small>
+              </h3>
+              <h4 class="unmarg">
+                {{exp.data.designation}}
+                <small>(From: {{exp.data.fromDate}} To: {{exp.data.toDate}})</small>
+              </h4>
+              <p class="lead">{{exp.templateContent | safe}}</p>
+            {% endfor %}
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="text-block">
+              <h5>Phone</h5>
+              <p>
+                {{settings.mobile}}
+              </p>
+              <h5>Address</h5>
+              <p>
+                {{settings.address.address1}}
+                <br/>
+                {{settings.address.address2}}
+                <br/>
+                {{settings.address.address3}}
+              </p>
+              <h5>Email</h5>
+              <p>
+                {{settings.email}}
+              </p>
+              <h5>Age</h5>
+              <p>
+                {{settings.age}}
+              </p>
+            </div>
+            <h5>Skill Level</h5>
+            <div class="text-block">
+              {% for skill in collections.skills %}
+              <div class="progress-horizontal progress-horizontal--sm">
+                <div class="progress-horizontal__bar " data-value="{{skill.data.value}}"></div>
+                <span class="progress-horizontal__label h5">{{skill.data.name}}: {{skill.data.value}}%</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </section>
+  {% endblock %}
+
+  {% block testimonials %}
+    <section class="text-center ">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <div class="row">
+          {% for testimonial in collections.testimonials %}
+            <div class="col-md-4">
+              <div class="feature feature-3 boxed boxed--lg boxed--border">
+                <img alt="{{testimonial.data.name}}" src="{{testimonial.data.picture}}">
+                <div class="text-block">
+                  <h4>{{testimonial.data.name}}</h4>
+                  <h5>{{testimonial.data.company}}</h5>
+                  {{testimonial.data.designation}}
+
+                </div>
+                {{testimonial.templateContent | safe}}
+              </div>
+              <!--end feature-->
+            </div>
+          {% endfor %}
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </section>
+
+  {% endblock %}
+
+  {% block projects %}
+    <section class="testimonials-1 space--xs bg--secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <p class="lead"> Products and Projects </p>
+          </div>
+          <div class="col-md-8">
+            <ul class="list-inline social-list">
+              {% for project in collections.projects %}
+                <li class="list-inline-item">
+                  <img alt="{{project.data.name}}" class="image--xxs" src="{{project.data.logo}}">
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </section>
+  {% endblock %}
+
+{% endblock %}

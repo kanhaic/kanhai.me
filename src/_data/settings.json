@@ -1,6 +1,20 @@
 {
+  "firstName": "Kanhai",
+  "lastName": "Chhugani",
+  "profileText": "Technology executive with consistent track record of developing technology-based products and delivering to market. Direct experience in product management, managing large product development organizations in multiple countries. Market analysis and product roadmap development.",
   "mobile": "(+91)-982-014-6196",
   "email": "kanhai (at) chhugani (dot) org",
+  "picture": "/assets/img/kanhai-chhugani.jpg",
+  "thumbnail": "/assets/img/kanhai-chhugani-thumbnail.jpg",
+  "age": "39",
+  "address": {
+    "address1": "E-301 Oberoi Splendor",
+    "address2": "JVLR, Opp Majas Depot",
+    "address3": "Jogeshwari East, Mumbai - 400 060",
+    "city": "Mumbai",
+    "country": "India"
+  },
+  "languages": ["English", "Hindi", "Sindhi"],
   "socials": [
     {
       "name": "facebook",
@@ -13,6 +27,44 @@
     {
       "name": "instagram",
       "url": "https://instagram.com/kanhaic"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/kanhaic"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/kanhaic"
     }
+  ],
+  "devLanguages": [
+    "C++",
+    ".NET platform",
+    "Java",
+    "PHP",
+    "Ruby Rails",
+    "NodeJS",
+    "golang"
+  ],
+  "databases": [
+    "DynamoDB",
+    "Mongodb",
+    "Casandra",
+    "MySQL",
+    "infuxdb",
+    "MS SQL Server",
+    "Oracle"
+  ],
+  "platforms": [
+    "Serverless Framework",
+    "AWS, Azure",
+    "Docker & Kubernetes",
+    "micro-services architecture",
+    "REST API",
+    "AI/ML"
+  ],
+  "educations": [
+    "International Executive MBA – Information Technology (United Business Institutes, Brussels, Belgium) – September -2013",
+    "BCA – University of Pune – April 2004"
   ]
 }
