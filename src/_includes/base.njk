@@ -76,81 +76,26 @@
                 {{ content | safe }}
             {% endblock %}
 
-            <footer class="space--sm footer-2">
+            <footer class="text-center space--sm footer-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 col-md-3 col-xs-6">
-                            <h6 class="type--uppercase">{{settings.firstName}} {{settings.lastName}}</h6>
-                            <ul class="list--hover">
-                                <li>
-                                    <a href="#">About {{settings.firstName}}</a>
-                                </li>
-                                <li>
-                                    <a href="#">History</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-xs-6">
-                            <h6 class="type--uppercase">Developers</h6>
-                            <ul class="list--hover">
-                                <li>
-                                    <a href="#">Developer Center</a>
-                                </li>
-                                <li>
-                                    <a href="#">API Reference</a>
-                                </li>
-                                <li>
-                                    <a href="#">Downloads</a>
-                                </li>
-                                <li>
-                                    <a href="#">Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Developer Blog</a>
-                                </li>
-                                <li>
-                                    <a href="#">Developer Forums</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-xs-6">
-                            <h6 class="type--uppercase">Twitter</h6>
-                            <div class="twitter-feed--slider twitter-feed">
-                                <div class="tweets-feed" data-feed-name="kanhaic" data-amount=1></div>
+                        <div class="col-sm-12">
+                            <div class="heading-block">
+                                <ul class="list-inline list--hover">
+                                    <li> <a href="/"><span>Home</span></a> </li>
+                                    <li> <a href="/blogs"><span>Blogs</span></a> </li>
+                                    <li> <a href="/resume"><span>Resume</span></a> </li>
+                                    <li> <a href="/contact"><span>Contact</span></a> </li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-xs-6">
-                            <h6 class="type--uppercase">Locations</h6>
-                            <ul class="list--hover">
-                                <li>
-                                    <a href="#">Melbourne</a>
-                                </li>
-                                <li>
-                                    <a href="#">London</a>
-                                </li>
-                                <li>
-                                    <a href="#">New York</a>
-                                </li>
-                                <li>
-                                    <a href="#">San Francisco</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <span class="type--fine-print">© <span class="update-year"></span> {{settings.firstName}} {{settings.lastName}} </span>
-                        </div>
-                        <div class="col-sm-6 text-right text-left-xs">
-                            <ul class="social-list list-inline list--hover">
-                                {% for social in settings.socials %}
-                                    <li>
-                                        <a href="{{social.url}}" target="_blank">
-                                            <i class="socicon socicon-{{social.name}} icon icon--xs"></i>
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+                            <div>
+                                <ul class="social-list list-inline list--hover">
+                                    {% for social in settings.socials %}
+                                        <li><a href="{{social.url}}"><i class="socicon socicon-{{social.name}} icon icon--xs"></i></a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div> <span class="type--fine-print">© <span class="update-year"></span> {{settings.firstName}} {{settings.lastName}}</span></div>
                         </div>
                     </div>
                 </div>
