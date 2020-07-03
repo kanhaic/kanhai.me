@@ -5,7 +5,6 @@ title: Blog post one
 featuredImage: "/assets/img/blog-2.jpg"
 category: "Design"
 date: 2020-07-02
-permalink: "/blogs/{{title | slug}}"
 ---
 
 Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances.

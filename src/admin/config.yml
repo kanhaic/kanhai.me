@@ -1,3 +1,34 @@
 backend:
   name: git-gateway
   branch: master
+
+media_folder: "/assets/img/uploads"
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
+      - {label: "tags", name: "Tag", widget: "hidden", default: "posts"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "featuredImage", widget: "image"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "experiences" # Used in routes, e.g., /admin/collections/blog
+    label: "Experiences" # Used in the UI
+    folder: "experiences" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+      - {label: "tags", name: "Tag", widget: "hidden", default: "experiences"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Designation", name: "designation", widget: "string"}
+      - {label: "From Date", name: "fromDate", widget: "string"}
+      - {label: "To Date", name: "toDate", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

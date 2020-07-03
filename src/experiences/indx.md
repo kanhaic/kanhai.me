@@ -1,4 +1,5 @@
 ---
+layout: base.njk
 tags: experiences
 name: INDx Technologies Pvt Ltd
 location: (Palo Alto, CA)/(Mumbai, India)

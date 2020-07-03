@@ -15,11 +15,11 @@
             <hr>
             <div class="masonry__container row">
               <div class="masonry__item col-md-6"></div>
-              {% for post in collections.posts %}
+              {% for post in posts %}
                 <div class="masonry__item col-md-6" data-masonry-filter="{{post.data.category}}">
                   <article class="feature feature-1">
                     <a href="{{post.url}}" class="block">
-                      <img alt="Image" src="/assets/img/blog-4.jpg"/>
+                      <img alt="Image" src="{{post.data.featuredImage}}"/>
                     </a>
                     <div class="feature__body boxed boxed--border">
                       <h5>{{post.data.title}}</h5>
@@ -34,20 +34,17 @@
             </div>
             <!--end of masonry container-->
             <div class="pagination">
-              <a class="pagination__prev" href="#" title="Previous Page">&laquo;</a>
+              {% if pagination.href.previous %}<a class="pagination__prev" href="{{ pagination.href.previous }}">&laquo;</a>{% endif %}
               <ol>
-                <li>
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li class="pagination__current">3</li>
-                <li>
-                  <a href="#">4</a>
-                </li>
+                {%- for pageEntry in pagination.pages %}
+                  <li>
+                    <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+                  </li>
+                {%- endfor %}
               </ol>
-              <a class="pagination__next" href="#" title="Next Page">&raquo;</a>
+              {% if pagination.href.next %}
+                <a class="pagination__next" href="{{ pagination.href.next }}" title="Next Page">&raquo;</a>
+              {% endif %}
             </div>
           </div>
           <!--end masonry-->

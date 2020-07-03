@@ -1,5 +1,6 @@
 ---
-tags: no
+eleventyExcludeFromCollections: true
+tags: testimonials
 name: Sabera Patni
 location: Mumbai, India
 designation: General Manager, Head HR
