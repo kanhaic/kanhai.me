@@ -3,6 +3,7 @@ layout: "layouts/blogs.njk"
 title: "Blogs"
 pagination:
   data: collections.posts
-  size: 6
+  size: 9
   alias: posts
+  reverse: true
 ---

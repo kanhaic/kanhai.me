@@ -15,7 +15,7 @@
             <hr>
             <div class="masonry__container row">
               <div class="masonry__item col-lg-4 col-md-6"></div>
-              {% for post in posts | reverse %}
+              {% for post in posts  %}
                 <div class="masonry__item col-lg-4 col-md-6" data-masonry-filter="{{post.data.category}}">
                   <article class="feature feature-1">
                     <a href="{{post.url}}" class="block">
