@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{ title }} | {{settings.firstName}} {{settings.lastName}}</title>
+        <title>{{ title }} | {{settings.firstName}}
+            {{settings.lastName}}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/assets/css/flickity.css" rel="stylesheet" type="text/css" media="all">
         <link href="/assets/css/socicon.css" rel="stylesheet" type="text/css" media="all"/>
@@ -82,20 +83,39 @@
                         <div class="col-sm-12">
                             <div class="heading-block">
                                 <ul class="list-inline list--hover">
-                                    <li> <a href="/"><span>Home</span></a> </li>
-                                    <li> <a href="/blogs"><span>Blogs</span></a> </li>
-                                    <li> <a href="/resume"><span>Resume</span></a> </li>
-                                    <li> <a href="/contact"><span>Contact</span></a> </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>Home</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="/blogs">
+                                            <span>Blogs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="/resume">
+                                            <span>Resume</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="/contact">
+                                            <span>Contact</span></a>
+                                    </li>
                                 </ul>
                             </div>
                             <div>
                                 <ul class="social-list list-inline list--hover">
                                     {% for social in settings.socials %}
-                                        <li><a href="{{social.url}}"><i class="socicon socicon-{{social.name}} icon icon--xs"></i></a></li>
+                                        <li>
+                                            <a href="{{social.url}}">
+                                                <i class="socicon socicon-{{social.name}} icon icon--xs"></i>
+                                            </a>
+                                        </li>
                                     {% endfor %}
                                 </ul>
                             </div>
-                            <div> <span class="type--fine-print">© <span class="update-year"></span> {{settings.firstName}} {{settings.lastName}}</span></div>
+                            <div>
+                                <span class="type--fine-print">© <span class="update-year"></span>
+                                    {{settings.firstName}}
+                                    {{settings.lastName}}</span></div>
                         </div>
                     </div>
                 </div>
@@ -117,7 +137,22 @@
         <script src="/assets/js/spectragram.min.js"></script>
         <script src="/assets/js/smooth-scroll.min.js"></script>
         <script src="/assets/js/scripts.js"></script>
-
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script>
+            if (window.netlifyIdentity) {
+                window
+                    .netlifyIdentity
+                    .on("init", user => {
+                        if (!user) {
+                            window
+                                .netlifyIdentity
+                                .on("login", () => {
+                                    document.location.href = "/admin/";
+                                });
+                        }
+                    });
+            }
+        </script>
     </body>
 
 </html>
