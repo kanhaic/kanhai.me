@@ -1,10 +1,9 @@
 ---
 layout: layouts/post.njk
-Tag: posts
+tags: posts
 title: Starting my new blog with 11ty and netlify
 date: 2020-07-03T08:35:10.760Z
 featuredImage: /assets/img/uploads/builtwith11ty.png
-permalink: /blog/{{title | slug}}
 category: Engineering
 eleventyExcludeFromCollections: false
 ---
