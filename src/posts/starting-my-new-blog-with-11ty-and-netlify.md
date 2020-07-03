@@ -7,4 +7,4 @@ featuredImage: /assets/img/uploads/builtwith11ty.png
 category: Engineering
 eleventyExcludeFromCollections: false
 ---
-Built my website with eleventy and hosted it with netlify and setup the netlify CMS. it took me a couple of days to setup my website and blog, but I kind of like the serverless concept for websites.
+Built my website with [eleventy](https://www.11ty.dev/) and hosted it with [netlify](https://www.netlify.com/) and setup the [Netlify CMS](https://www.netlifycms.org/). it took me a couple of days to setup my website and blog, but I kind of like the serverless concept for websites.
