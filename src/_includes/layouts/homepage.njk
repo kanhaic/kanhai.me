@@ -32,6 +32,7 @@
   {% endblock %}
   {{content | safe}}
   {% block recentblogs %}
+    {% if (collections.posts | length) > 0 %}
     <section class="space--xs">
       <div class="container">
         <div class="row text-block">
@@ -60,6 +61,7 @@
         </div>
       </div>
     </section>
+    {% endif %}
   {% endblock %}
 
 {% endblock %}

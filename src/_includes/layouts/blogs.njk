@@ -5,55 +5,61 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="masonry">
-            <div class="masonry-filter-container d-flex align-items-center">
-              <span>Category:</span>
-              <div class="masonry-filter-holder">
-                <div class="masonry__filters" data-filter-all-text="All Categories"></div>
+
+          {% if (collections.posts | length) > 0 %}
+            <div class="masonry">
+              <div class="masonry-filter-container d-flex align-items-center">
+                <span>Category:</span>
+                <div class="masonry-filter-holder">
+                  <div class="masonry__filters" data-filter-all-text="All Categories"></div>
+                </div>
               </div>
-            </div>
-            <hr>
-            <div class="masonry__container row">
-              <div class="masonry__item col-lg-4 col-md-6"></div>
-              {% for post in posts  %}
-                <div class="masonry__item col-lg-4 col-md-6" data-masonry-filter="{{post.data.category}}">
-                  <article class="feature feature-1">
-                    <a href="{{post.url}}" class="block">
-                      <img alt="{{post.data.title}}" src="{{post.data.featuredImage}}"/>
-                    </a>
-                    <div class="feature__body boxed boxed--border">
-                      <h5>{{post.data.title}}</h5>
-                      <a href="{{post.url}}">
+              <hr>
+              <div class="masonry__container row">
+                <div class="masonry__item col-lg-4 col-md-6"></div>
+                {% for post in collections.posts %}
+                  <div class="masonry__item col-lg-4 col-md-6" data-masonry-filter="{{post.data.category}}">
+                    <article class="feature feature-1">
+                      <a href="{{post.url}}" class="block">
+                        <img alt="{{post.data.title}}" src="{{post.data.featuredImage}}"/>
+                      </a>
+                      <div class="feature__body boxed boxed--border">
+                        <h5>{{post.data.title}}</h5>
+                        <a href="{{post.url}}">
                                                     Read More
                                                 </a>
-                    </div>
-                  </article>
-                </div>
-              {% endfor %}
-              <!--end item-->
+                      </div>
+                    </article>
+                  </div>
+                {% endfor %}
+                <!--end item-->
+              </div>
+              <!--end of masonry container-->
+              <div class="pagination">
+                {% if pagination.href.previous %}
+                  <a class="pagination__prev" href="{{ pagination.href.previous }}">&laquo;</a>
+                {% endif %}
+                <ol>
+                  {%- for pageEntry in pagination.pages %}
+                    <li>
+                      <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+                    </li>
+                  {%- endfor %}
+                </ol>
+                {% if pagination.href.next %}
+                  <a class="pagination__next" href="{{ pagination.href.next }}" title="Next Page">&raquo;</a>
+                {% endif %}
+              </div>
             </div>
-            <!--end of masonry container-->
-            <div class="pagination">
-              {% if pagination.href.previous %}
-                <a class="pagination__prev" href="{{ pagination.href.previous }}">&laquo;</a>
-              {% endif %}
-              <ol>
-                {%- for pageEntry in pagination.pages %}
-                  <li>
-                    <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>
-                  </li>
-                {%- endfor %}
-              </ol>
-              {% if pagination.href.next %}
-                <a class="pagination__next" href="{{ pagination.href.next }}" title="Next Page">&raquo;</a>
-              {% endif %}
-            </div>
-          </div>
-          <!--end masonry-->
+            <!--end masonry-->
+          {% else %}
+            {{content | safe }}
+          {% endif %}
         </div>
       </div>
       <!--end of row-->
     </div>
     <!--end of container-->
   </section>
+
 {% endblock %}
