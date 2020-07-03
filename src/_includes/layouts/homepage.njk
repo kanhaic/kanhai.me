@@ -30,7 +30,7 @@
       <!--end of container-->
     </section>
   {% endblock %}
-{{content | safe}}
+  {{content | safe}}
   {% block recentblogs %}
     <section class="space--xs">
       <div class="container">
@@ -40,48 +40,23 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <article class="feature feature-1">
-              <a href="#" class="block">
-                <img alt="Image" src="/assets/img/blog-2.jpg">
-              </a>
-              <div class="feature__body boxed boxed--border">
-                <span>May 25th 2016</span>
-                <h5>A day in the life of a professional fitness blogger</h5>
-                <a href="#">
+          {% for post in collections.posts | reverse %}
+            {% if loop.index0 < 3 %}    
+            <div class="col-md-4">
+              <article class="feature feature-1">
+                <a href="{{post.url}}" class="block">
+                  <img alt="{{post.data.title}}" src="{{post.data.featuredImage}}">
+                </a>
+                <div class="feature__body boxed boxed--border">
+                  <h5>{{post.data.title}}</h5>
+                  <a href="{{post.url}}">
 							Read More
 						</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-4">
-            <article class="feature feature-1">
-              <a href="#" class="block">
-                <img alt="Image" src="/assets/img/blog-3.jpg">
-              </a>
-              <div class="feature__body boxed boxed--border">
-                <span>May 25th 2016</span>
-                <h5>Small businesses that expertly leverage their online followings</h5>
-                <a href="#">
-							Read More
-						</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-4">
-            <article class="feature feature-1">
-              <a href="#" class="block">
-                <img alt="Image" src="/assets/img/blog-4.jpg">
-              </a>
-              <div class="feature__body boxed boxed--border">
-                <span>May 25th 2016</span>
-                <h5>Designing efficiently in the age of distraction</h5>
-                <a href="#">
-							Read More
-						</a>
-              </div>
-            </article>
-          </div>
+                </div>
+              </article>
+            </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
     </section>
