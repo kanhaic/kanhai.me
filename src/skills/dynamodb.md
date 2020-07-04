@@ -1,6 +1,6 @@
 ---
 tags: skills
 name: DynamoDB
-value: 95
+value: 90
 eleventyExcludeFromCollections: false
 ---
