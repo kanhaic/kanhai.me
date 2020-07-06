@@ -20,7 +20,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Meta Description", name: "metadescription", widget: "string"}
       - {label: "Hide", name: "eleventyExcludeFromCollections", widget: "boolean", default: false}
-      
   - name: "experiences" # Used in routes, e.g., /admin/collections/blog
     label: "Experiences" # Used in the UI
     folder: "src/experiences" # The path to the folder where the documents are stored
@@ -30,12 +29,13 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
       - {label: "Tags", name: "tags", widget: "hidden", default: "experiences"}
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Designation", name: "designation", widget: "string"}
       - {label: "From Date", name: "fromDate", widget: "string"}
       - {label: "To Date", name: "toDate", widget: "string"}
       - {label: "Hide", name: "eleventyExcludeFromCollections", widget: "boolean", default: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
     folder: "src/projects" # The path to the folder where the documents are stored
@@ -44,11 +44,11 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Tags", name: "tags", widget: "hidden", default: "projects"}
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Logo", name: "logo", widget: "image"}
       - {label: "Company", name: "company", widget: "string"}
       - {label: "URL", name: "url", widget: "string"}
       - {label: "Hide", name: "eleventyExcludeFromCollections", widget: "boolean", default: false}
-      - {label: "Body", name: "body", widget: "markdown"}
   - name: "skills" # Used in routes, e.g., /admin/collections/blog
     label: "Skills" # Used in the UI
     folder: "src/skills" # The path to the folder where the documents are stored
@@ -67,9 +67,9 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Tags", name: "tags", widget: "hidden", default: "testimonials"}
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Designation", name: "designation", widget: "string"}
       - {label: "Company", name: "company", widget: "string"}
       - {label: "Picture", name: "picture", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Hide", name: "eleventyExcludeFromCollections", widget: "boolean", default: false}
