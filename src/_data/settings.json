@@ -1,4 +1,6 @@
 {
+  "baseURL": "https://kanhai.me",
+  "description":"Kanhai Chhugani's Blog",
   "firstName": "Kanhai",
   "lastName": "Chhugani",
   "profileText": "Technology executive with consistent track record of developing technology-based products and delivering to market. Direct experience in product management, managing large product development organizations in multiple countries. Market analysis and product roadmap development.",
@@ -6,6 +8,7 @@
   "email": "kanhai (at) chhugani (dot) org",
   "picture": "/assets/img/kanhai-chhugani.jpg",
   "thumbnail": "/assets/img/kanhai-chhugani-thumbnail.jpg",
+  "twitter": "kanhaic",
   "age": "39",
   "address": {
     "address1": "E-301 Oberoi Splendor",

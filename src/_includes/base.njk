@@ -4,6 +4,41 @@
         <meta charset="utf-8">
         <title>{{ title }} | {{settings.firstName}}
             {{settings.lastName}}</title>
+        {% if metadescription %}
+            <meta description="{{metadescription}}">
+        {% else %}
+            <meta description="{{ title }} | {{settings.firstName}}
+            {{settings.lastName}}">
+        {% endif %}
+
+        {%- block seo -%}
+            <!--Twitter Card-->
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="@{{settings.twitter}}">
+            <meta name="twitter:creator" content="@{{settings.twitter}}">
+            <meta name="twitter:url" content="{{settings.baseURL}}{{page.url}}">
+            <meta name="twitter:title" content="{{title}}">
+            <meta name="twitter:description" content="{{ settings.description }}">
+
+            <!--Schema-->
+            <link rel="author" href="{{settings.baseURL}}">
+            <link rel="publisher" href="{{settings.baseURL}}">
+            <meta itemprop="name" content="{{title}}">
+            <meta itemprop="description" content="{{ settings.description }}">
+
+            <!-- Facebook OpenGraph -->
+            <meta property="fb:app_id" content="{{settings.FB_APP_ID}}">
+            <meta property="og:url" content="{{settings.baseURL}}{{page.url}}">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="{{title}}">
+            <meta property="og:description" content="{{ settings.description }}">
+            <meta property="og:site_name" content="{{settings.title}}">
+            <meta property="og:locale" content="en_GB">
+            <meta property="article:author" content="{{settings.baseURL}}">
+        {%- endblock -%}
+
+        <meta name="robots" content="index,follow">
+        <meta name="subject" content="Kanhai Chhugani's Blog">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/assets/css/flickity.css" rel="stylesheet" type="text/css" media="all">
         <link href="/assets/css/socicon.css" rel="stylesheet" type="text/css" media="all"/>

@@ -14,11 +14,13 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
       - {label: "Tags", name: "tags", widget: "hidden", default: "posts"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Hide", name: "eleventyExcludeFromCollections", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Meta Description", name: "metadescription", widget: "string"}
+      - {label: "Hide", name: "eleventyExcludeFromCollections", widget: "boolean", default: false}
+      
   - name: "experiences" # Used in routes, e.g., /admin/collections/blog
     label: "Experiences" # Used in the UI
     folder: "src/experiences" # The path to the folder where the documents are stored

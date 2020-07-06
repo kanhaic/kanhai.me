@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 tags: posts
+metadescription: "Blog post talks about How the blog was built using 11ty and netlify"
 title: Starting my new blog with 11ty and netlify
 date: 2020-07-03T08:35:10.760Z
 featuredImage: /assets/img/uploads/builtwith11ty.png

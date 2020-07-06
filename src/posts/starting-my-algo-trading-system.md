@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 tags: posts
+metadescription: "Blog post talks about the start of Kanhai Chhugani's Journey in Algo Trading"
 title: Starting my Algo trading system
 date: 2020-07-04T06:23:45.466Z
 featuredImage: /assets/img/uploads/algo-1263x560.jpg
