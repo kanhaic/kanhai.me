@@ -6,6 +6,7 @@ designation: Director, Research & Development
 fromDate: April, 2009
 toDate: September 2010
 date: 2010-09-01
+sitemapIgnore: true
 ---
 
 * Managed product development for Clinical Data Center (CDC) and product design and development of Laboratory Information Management System (LIMS).

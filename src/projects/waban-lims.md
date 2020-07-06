@@ -4,4 +4,5 @@ logo: "https://media-exp1.licdn.com/dms/image/C4D0BAQE43vXnIyjF9g/company-logo_2
 company: "Waban Software"
 name: "Waban LIMS"
 url: "https://www.oracle.com"
+sitemapIgnore: true
 ---

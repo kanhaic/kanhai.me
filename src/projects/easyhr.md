@@ -4,4 +4,5 @@ logo: "https://www.easyhrworld.com/wp-content/uploads/2019/03/79-r-heighteasyhrl
 company: "Street Light Software Private Limited"
 name: "EasyHR"
 url: "https://www.easyhrworld.com"
+sitemapIgnore: true
 ---

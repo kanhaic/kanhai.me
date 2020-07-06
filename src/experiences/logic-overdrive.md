@@ -6,6 +6,7 @@ designation: Project Manager
 fromDate: October, 2002
 toDate: March, 2004
 date: 2002-10-01
+sitemapIgnore: true
 ---
 
 * Supervised QA for the software.

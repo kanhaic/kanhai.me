@@ -8,6 +8,7 @@ toDate: September, 2012
 date: 2011-04-01
 fromDate: April 2011
 eleventyExcludeFromCollections: false
+sitemapIgnore: true
 ---
 Setup India product development operation for INDx Technologies.
 

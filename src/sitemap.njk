@@ -1,0 +1,22 @@
+---
+permalink: /sitemap.xml
+sitemapIgnore: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/assets/styles/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.all %}
+{%- if item.data.sitemapIgnore !== true %}
+  <url>
+    <loc>https://kanhai.me{{ item.url }}</loc>
+    {% if item.data.premier.date -%}
+    <lastmod>{{ item.data.date.toISOString() }}</lastmod>
+    {%- else -%}
+    <lastmod>{{ item.date.toISOString() }}</lastmod>
+    {%- endif %}
+    <changefreq>{{ item.data.changefreq }}</changefreq>
+    <priority>{{ item.data.priority  }}</priority>
+  </url>
+{%- endif %}
+{%- endfor %}
+</urlset>

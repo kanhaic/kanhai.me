@@ -6,6 +6,7 @@ designation: Software Programmer
 fromDate: June 2000
 toDate: May 2001
 date: 2000-06-01
+sitemapIgnore: true
 ---
 
 Worked as a developer role

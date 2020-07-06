@@ -7,6 +7,7 @@ fromDate: September, 2012
 toDate: Present
 date: 2012-09-01
 eleventyExcludeFromCollections: false
+sitemapIgnore: true
 ---
 __Founder of Street Light Software__
 

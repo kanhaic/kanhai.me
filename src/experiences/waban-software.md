@@ -6,6 +6,7 @@ designation: Consultant / Product Manager
 fromDate: March, 2004
 toDate: February, 2006
 date: 2004-03-01
+sitemapIgnore: true
 ---
 
 Worked as a developer role building modules for Waban LIMS.

@@ -7,6 +7,7 @@ fromDate: September 1998
 toDate: March 2000
 date: 1998-09-01
 eleventyExcludeFromCollections: false
+sitemapIgnore: true
 ---
 Lead Developer for CRM Software Built with VB 6.0 and MS SQL Server.
 
