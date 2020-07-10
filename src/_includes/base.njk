@@ -5,36 +5,36 @@
         <title>{{ title }} | {{settings.firstName}}
             {{settings.lastName}}</title>
         {% if metadescription %}
-            <meta description="{{metadescription}}">
+            <meta description="{{metadescription}}" />
         {% else %}
             <meta description="{{ title }} | {{settings.firstName}}
-            {{settings.lastName}}">
+            {{settings.lastName}}" />
         {% endif %}
 
         {%- block seo -%}
-        <!--Twitter Card-->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@{{settings.twitter}}">
-        <meta name="twitter:creator" content="@{{settings.twitter}}">
-        <meta name="twitter:url" content="{{settings.baseURL}}{{page.url}}">
-        <meta name="twitter:title" content="{{title}}">
-        <meta name="twitter:description" content="{{ settings.description }}">
+            <!--Twitter Card-->
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="@{{settings.twitter}}">
+            <meta name="twitter:creator" content="@{{settings.twitter}}">
+            <meta name="twitter:url" content="{{settings.baseURL}}{{page.url}}">
+            <meta name="twitter:title" content="{{title}}">
+            <meta name="twitter:description" content="{{ settings.description }}">
 
-        <!--Schema-->
-        <link rel="author" href="{{settings.baseURL}}">
-        <link rel="publisher" href="{{settings.baseURL}}">
-        <meta itemprop="name" content="{{title}}">
-        <meta itemprop="description" content="{{ settings.description }}">
+            <!--Schema-->
+            <link rel="author" href="{{settings.baseURL}}">
+            <link rel="publisher" href="{{settings.baseURL}}">
+            <meta itemprop="name" content="{{title}}">
+            <meta itemprop="description" content="{{ settings.description }}">
 
-        <!-- Facebook OpenGraph -->
-        <meta property="fb:app_id" content="{{settings.FB_APP_ID}}">
-        <meta property="og:url" content="{{settings.baseURL}}{{page.url}}">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="{{title}}">
-        <meta property="og:description" content="{{ settings.description }}">
-        <meta property="og:site_name" content="{{settings.title}}">
-        <meta property="og:locale" content="en_GB">
-        <meta property="article:author" content="{{settings.baseURL}}">
+            <!-- Facebook OpenGraph -->
+            <meta property="fb:app_id" content="{{settings.FB_APP_ID}}">
+            <meta property="og:url" content="{{settings.baseURL}}{{page.url}}">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="{{title}}">
+            <meta property="og:description" content="{{ settings.description }}">
+            <meta property="og:site_name" content="{{settings.title}}">
+            <meta property="og:locale" content="en_GB">
+            <meta property="article:author" content="{{settings.baseURL}}">
         {%- endblock -%}
 
         <meta name="robots" content="index,follow">
@@ -42,7 +42,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/assets/css/flickity.css" rel="stylesheet" type="text/css" media="all">
         <link href="/assets/css/socicon.css" rel="stylesheet" type="text/css" media="all" rel="preload"/>
-        <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" rel="preload"/>
         <link href="/assets/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" rel="preload"/>
         <link href="/assets/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
@@ -162,23 +162,23 @@
             </footer>
         </div>
         <script src="/assets/js/jquery-3.1.1.min.js"></script>
-        <script async src="/assets/js/easypiechart.min.js"></script>
-        <script async src="/assets/js/flickity.min.js"></script>
-        <script async src="/assets/js/parallax.js"></script>
-        <script async src="/assets/js/typed.min.js"></script>
-        <script async src="/assets/js/datepicker.js"></script>
-        <script async src="/assets/js/isotope.min.js"></script>
-        <script async src="/assets/js/ytplayer.min.js"></script>
-        <script async src="/assets/js/lightbox.min.js"></script>
-        <script async src="/assets/js/granim.min.js"></script>
-        <script async src="/assets/js/jquery.steps.min.js"></script>
-        <script async src="/assets/js/countdown.min.js"></script>
-        <script async src="/assets/js/twitterfetcher.min.js"></script>
-        <script async src="/assets/js/spectragram.min.js"></script>
-        <script async src="/assets/js/smooth-scroll.min.js"></script>
-        <script async src="/assets/js/scripts.js"></script>
-        <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <script async>
+        <script defer src="/assets/js/easypiechart.min.js"></script>
+        <script defer src="/assets/js/flickity.min.js"></script>
+        <script defer src="/assets/js/parallax.js"></script>
+        <script defer src="/assets/js/typed.min.js"></script>
+        <script defer src="/assets/js/datepicker.js"></script>
+        <script defer src="/assets/js/isotope.min.js"></script>
+        <script defer src="/assets/js/ytplayer.min.js"></script>
+        <script defer src="/assets/js/lightbox.min.js"></script>
+        <script defer src="/assets/js/granim.min.js"></script>
+        <script defer src="/assets/js/jquery.steps.min.js"></script>
+        <script defer src="/assets/js/countdown.min.js"></script>
+        <script defer src="/assets/js/twitterfetcher.min.js"></script>
+        <script defer src="/assets/js/spectragram.min.js"></script>
+        <script defer src="/assets/js/smooth-scroll.min.js"></script>
+        <script defer src="/assets/js/scripts.js"></script>
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script>
             if (window.netlifyIdentity) {
                 window
                     .netlifyIdentity
