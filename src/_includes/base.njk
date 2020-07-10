@@ -5,10 +5,9 @@
         <title>{{ title }} | {{settings.firstName}}
             {{settings.lastName}}</title>
         {% if metadescription %}
-            <meta description="{{metadescription}}" />
+            <meta name="description" content="{{metadescription}}">
         {% else %}
-            <meta description="{{ title }} | {{settings.firstName}}
-            {{settings.lastName}}" />
+            <meta name="description" content="{{ title }} | {{settings.firstName}} {{settings.lastName}}">
         {% endif %}
 
         {%- block seo -%}
