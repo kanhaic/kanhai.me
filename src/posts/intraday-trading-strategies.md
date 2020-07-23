@@ -23,9 +23,8 @@ SL: Max Loss is ₹8000/-
 
 **Opening Range Breakout**
 
-Take 15 minutes Range of NIFTY or BANKNIFTY
-
-1. Sell ATM PE if NIFTY/BANKNIFTY 
-2. SL at Low of 15 min Opening Range of NIFTY/BANKNIFTY
-3. Sell ATM PE if NIFTY/BANKNIFTY 
-4. SL at High of 15 min Opening Range of NIFTY/BANKNIFTY
+1. Take 15 minutes Range of NIFTY or BANKNIFTY
+2. Sell ATM PE if NIFTY/BANKNIFTY 
+3. SL at Low of 15 min Opening Range of NIFTY/BANKNIFTY
+4. Sell ATM PE if NIFTY/BANKNIFTY 
+5. SL at High of 15 min Opening Range of NIFTY/BANKNIFTY
