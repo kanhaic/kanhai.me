@@ -2,11 +2,12 @@
 layout: layouts/post.njk
 tags: posts
 title: Intraday Trading Strategies
-featuredImage: /assets/img/uploads/fluctuating-stock-prices.jpg
+featuredImage: /assets/img/uploads/intraday-trading.png
 category: Algo Trading
 date: 2020-07-22T05:49:23.092Z
-metadescription: NIFTY and BANKNIFTY Intraday Strategies for Option selling for algo trading
-eleventyExcludeFromCollections: true
+metadescription: This blog post talks about NIFTY and BANKNIFTY Intraday
+  Strategies for Option selling for Algo trading
+eleventyExcludeFromCollections: false
 ---
 For intraday trading strategies I currently use 2 Strategies
 
