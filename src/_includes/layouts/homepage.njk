@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row align-items-center justify-content-around">
           <div class="col-md-6">
-            <img alt="Image" src="{{settings.picture}}"/>
+            <img alt="{{settings.firstName}} {{settings.lastName}} Picture" src="{{settings.picture}} " width="293"  height="501"/>
           </div>
           <div class="col-md-6 col-lg-5 mt-0">
             <h1 class="color--primary">
@@ -51,7 +51,7 @@
             <div class="col-md-4">
               <article class="feature feature-1">
                 <a href="{{post.url}}" class="block">
-                  <img alt="{{post.data.title}}" src="{{post.data.featuredImage}}">
+                  <img alt="{{post.data.title}}" src="{{post.data.featuredImage}}" width="300px" height="200px">
                 </a>
                 <div class="feature__body boxed boxed--border">
                   <h4>{{post.data.title}}</h4>
