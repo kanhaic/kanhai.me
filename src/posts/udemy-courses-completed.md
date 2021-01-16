@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 tags: posts
-title: Udemy Courses Completed
+title: Courses Completed on Algorithmic Trading on KiteConnect Platform - Udemy
 featuredImage: /assets/img/uploads/2970812_ab1c_2.jpg
 category: Algo Trading
 date: 2021-01-16T07:24:48.656Z
