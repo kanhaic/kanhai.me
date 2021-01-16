@@ -1,7 +1,8 @@
 ---
 layout: layouts/post.njk
 tags: posts
-title: Udemy Courses Completed
+title: Courses Completed Algorithmic Trading A-Z with Python, Machine Learning &
+  AWS - Udemy
 featuredImage: /assets/img/uploads/3395102_22d6_2.jpg
 category: Algo Trading
 date: 2021-01-16T07:32:27.985Z
