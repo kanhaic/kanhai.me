@@ -1,7 +1,7 @@
 ---
 tags: skills
 name: Flutter/Dart
-value: 80
+value: 90
 eleventyExcludeFromCollections: false
 sitemapIgnore: true
 ---
