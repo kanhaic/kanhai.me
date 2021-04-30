@@ -47,7 +47,8 @@
     "PHP",
     "Ruby Rails",
     "NodeJS",
-    "golang"
+    "golang",
+    "Python"
   ],
   "databases": [
     "DynamoDB",
